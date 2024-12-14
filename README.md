@@ -6,4 +6,4 @@ This project will be an analysis on my own Youtube usage.
 
 ## Motivation
 
-The motivation behind this analysis is to gain a deeper understanding of my YouTube usage patterns. By examining the channels I subscribe to, the types of videos I watch, my viewing habits, and my engagement with likes, comments, and shares,I aim to uncover meaningful insights about my online behavior and interests.
+The motivation behind this analysis is to gain a deeper understanding of my YouTube usage patterns. By examining my viewing habits via my watch history considering which days i watch more videos, and what time of the day i watch more videos, also how often do i engage with comments,and  which days and times i add videos to my Watch Later playlist. I aim to uncover meaningful insights about my online behavior and interests.
