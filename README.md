@@ -303,68 +303,6 @@ plt.show()
 
 
 
-## Plot Histogram Comments posted Day of the Week
-
-```python
-
-plt.figure(figsize=(12, 6))
-
-# Comments
-plt.subplot(1, 2, 1)
-comments_grouped.plot(kind='bar')
-plt.title('Comments by Day of the Week')
-plt.xlabel('Day of the Week')
-plt.ylabel('Number of Comments')
-plt.tight_layout()
-
-```
-
-
-![image](https://github.com/user-attachments/assets/0c9d02ee-6890-45c8-8230-a403b364bda7)
-
-
-
-
-
-
-
-## Plot Histogram Videos added to Watch-later posted Day of the Week
-
-```python
-
-# Watch Later
-plt.subplot(1, 2, 2)
-watch_later_grouped.plot(kind='bar', color='orange')
-plt.title('Videos Added to Watch Later by Day of the Week')
-plt.xlabel('Day of the Week')
-plt.ylabel('Number of Videos')
-plt.tight_layout()
-
-plt.show()
-
-```
-
-
-![image](https://github.com/user-attachments/assets/779031f6-a2e9-47be-b044-bacbbe10d20c)
-
-
-
-
-Download the processed files back to local computer in order to plot other histograms more accuretely:
-
-```python
-
-comments.to_csv("processed_comments.csv", index=False)
-watch_later.to_csv("processed_watch_later.csv", index=False)
-watch_history_df.to_csv("processed_watch_history.csv", index=False)
-
-# Download the processed files back to your local computer
-from google.colab import files
-files.download("processed_comments.csv")
-files.download("processed_watch_later.csv")
-files.download("processed_watch_history.csv")
-
-```
 
 
 
