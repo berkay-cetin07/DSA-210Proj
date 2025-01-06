@@ -18,7 +18,7 @@ Data is directly exported from Google Takeout, selecting YouTube ve YouTube Musi
 
 ## My Hypothesis
 
-Number of comment i post, add videos to watch-later and time i spent on youtube does not depend on weekend or weekdays and specific month of a year and also time of the day.
+Number of comment i post on youtube, add videos to watch-later and time i spent on youtube does not depend on weekend or weekdays and time of the day.
 
 
 
@@ -440,4 +440,20 @@ As a conclusion: i can say that my hypothesis is generally holding.
 
 # Limitations and future work
 
-Data was not a limitation in my project. However, Webscraping is really limited and hard to do on a complex site like YouTube, maybe if I could have used YouTube's API, i could have fetch more useful and meaningful data for my project.
+## Limatations:
+
+The analysis heavily relies on data exported from Google Takeout. While comprehensive, this data might not capture every nuance of my YouTube usage, maybe if I could have used YouTube's API, i could have fetch more useful and meaningful data for my project.
+
+The dataset does not include details about the content (e.g., video genres or categories). This limits the ability to analyze preferences or trends in the types of videos watched.
+
+While exploratory analysis was conducted, the findings are not backed by advanced statistical tests or machine learning models. This could leave room for unverified assumptions or overlooked patterns.
+
+## Future Work:
+
+I could collect data continuously over a longer period to analyze long-term trends and reduce variability. 
+
+Analyze metadata about the videos watched (e.g., category, duration, or channel popularity) to understand preferences better.
+
+Use machine learning techniques to predict future behavior, such as peak usage times or days with higher engagement. Explore clustering to identify unique behavioral patterns (e.g., weekday vs. weekend habits).
+
+Extend the analysis to compare individual behavior with general trends in YouTube usage, based on publicly available datasets. Collaborate with others to investigate how YouTube usage patterns vary across demographics or geographic locations.
