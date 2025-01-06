@@ -16,4 +16,28 @@ I have only one source of data:
 Data is directly exported from Google Takeout, selecting YouTube ve YouTube Music data request.
 
 
-![image](https://github.com/user-attachments/assets/391093f7-a5fa-408e-ae32-34957f4645be)
+## My Hypothesis
+
+Number of comment i post and time i spent on youtube does not depend on weekend or weekdays and specific month of a year and also time of the day.
+
+
+
+# Code
+
+Importing some libraries:
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime
+from bs4 import BeautifulSoup
+```
+
+To upload the youtube data into system:
+```python
+from google.colab import files
+
+# Upload files
+uploaded = files.upload()
+```
+
+
