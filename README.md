@@ -18,7 +18,7 @@ Data is directly exported from Google Takeout, selecting YouTube ve YouTube Musi
 
 ## My Hypothesis
 
-Number of comment i post and time i spent on youtube does not depend on weekend or weekdays and specific month of a year and also time of the day.
+Number of comment i post, add videos to watch-later and time i spent on youtube does not depend on weekend or weekdays and specific month of a year and also time of the day.
 
 
 
@@ -299,3 +299,207 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/f8ad86f0-aaf0-4076-b163-b1373260f199)
 
+
+
+
+
+## Plot Histogram Comments posted Day of the Week
+
+```python
+
+plt.figure(figsize=(12, 6))
+
+# Comments
+plt.subplot(1, 2, 1)
+comments_grouped.plot(kind='bar')
+plt.title('Comments by Day of the Week')
+plt.xlabel('Day of the Week')
+plt.ylabel('Number of Comments')
+plt.tight_layout()
+
+```
+
+
+![image](https://github.com/user-attachments/assets/0c9d02ee-6890-45c8-8230-a403b364bda7)
+
+
+
+
+
+
+
+## Plot Histogram Videos added to Watch-later posted Day of the Week
+
+```python
+
+# Watch Later
+plt.subplot(1, 2, 2)
+watch_later_grouped.plot(kind='bar', color='orange')
+plt.title('Videos Added to Watch Later by Day of the Week')
+plt.xlabel('Day of the Week')
+plt.ylabel('Number of Videos')
+plt.tight_layout()
+
+plt.show()
+
+```
+
+
+![image](https://github.com/user-attachments/assets/779031f6-a2e9-47be-b044-bacbbe10d20c)
+
+
+
+
+Download the processed files back to local computer in order to plot other histograms more accuretely:
+
+```python
+
+comments.to_csv("processed_comments.csv", index=False)
+watch_later.to_csv("processed_watch_later.csv", index=False)
+watch_history_df.to_csv("processed_watch_history.csv", index=False)
+
+# Download the processed files back to your local computer
+from google.colab import files
+files.download("processed_comments.csv")
+files.download("processed_watch_later.csv")
+files.download("processed_watch_history.csv")
+
+```
+
+
+
+## Plot Histogram Comments by Time of Day
+
+```python
+
+# Plot: Comments by Time of Day
+plt.figure(figsize=(12, 6))
+comments_by_hour.plot(kind='bar', width=0.9, color='skyblue', edgecolor='black')
+plt.title('Comments by Time of Day', fontsize=16)
+plt.xlabel('Hour of the Day', fontsize=14)
+plt.ylabel('Number of Comments', fontsize=14)
+plt.xticks(rotation=0, fontsize=12)
+plt.yticks(fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+```
+
+
+
+![image](https://github.com/user-attachments/assets/2e4d971b-80f7-41d3-8748-a07b36bbac82)
+
+
+
+
+## Plot Histogram Comments by Day of the Week
+
+
+```python
+
+# Plot: Comments by Day of the Week
+plt.figure(figsize=(12, 6))
+comments_by_day.plot(kind='bar', color='orange', width=0.9, edgecolor='black')
+plt.title('Comments by Day of the Week', fontsize=16)
+plt.xlabel('Day of the Week', fontsize=14)
+plt.ylabel('Number of Comments', fontsize=14)
+plt.xticks(rotation=0, fontsize=12)
+plt.yticks(fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+```
+
+
+![image](https://github.com/user-attachments/assets/acc72f28-2eaa-4356-a81f-23ec063fd604)
+
+
+
+
+
+## Plot Histogram Videos Added to Watch-Later by Time of Day
+
+```python
+
+# Plot: Videos Added to Watch-Later by Time of Day
+plt.figure(figsize=(12, 6))
+watch_later_by_hour.plot(kind='bar', width=0.9, color='skyblue', edgecolor='black')
+plt.title('Videos Added to Watch-Later by Time of Day', fontsize=16)
+plt.xlabel('Hour of the Day', fontsize=14)
+plt.ylabel('Number of Videos Added', fontsize=14)
+plt.xticks(rotation=0, fontsize=12)
+plt.yticks(fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+```
+
+
+
+![image](https://github.com/user-attachments/assets/55523eff-3fed-4434-8866-0af4714f3848)
+
+
+
+
+
+
+## Plot Histogram Videos Added to Watch-Later by Day of the Week
+
+
+```python
+
+# Plot: Videos Added to Watch-Later by Day of the Week
+plt.figure(figsize=(12, 6))
+watch_later_by_day.plot(kind='bar', color='orange', width=0.9, edgecolor='black')
+plt.title('Videos Added to Watch-Later by Day of the Week', fontsize=16)
+plt.xlabel('Day of the Week', fontsize=14)
+plt.ylabel('Number of Videos Added', fontsize=14)
+plt.xticks(rotation=0, fontsize=12)
+plt.yticks(fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+```
+
+
+
+
+![image](https://github.com/user-attachments/assets/baee829b-ed36-44e8-84a1-a6d4171241a9)
+
+
+
+
+
+
+
+
+
+# Findings
+
+
+As a result of my analyze i found out that:
+
+For the videos i watched by time of the day, i was not very active time between 01:00-07:00 in the morning however on other times the number of videos watched are quite close.
+
+For the videos i watched by day of the week, it goes evenly for weekdays and weekends.
+
+For the comments posted on youtube by the day of the week, i can say that i did the most posting on saturday and least posting on sunday, moreover on weekdays i posted comments on the average.
+
+For the comments posted on youtube by the time of the day.
+
+For the videos i added to watch-later by day of the week, it goes evenly for weekdays and weekends.
+
+For the videos i added to watch-later by time of the day, i was not very active time between 23:00-03:00 however on other times the number of videos watched are close.
+
+
+As a conclusion: i can say that my hypothesis is generally holding.
+
+
+
+# Limitations and future work
+
+Data was not a limitation in my project. However, Webscraping is really limited and hard to do on a complex site like YouTube, maybe if I could have used YouTube's API, i could have fetch more useful and meaningful data for my project.
