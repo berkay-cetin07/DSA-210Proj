@@ -14,3 +14,6 @@ The motivation behind this analysis is to gain a deeper understanding of my YouT
 I have only one source of data:
 
 Data is directly exported from Google Takeout, selecting YouTube ve YouTube Music data request.
+
+
+![image](https://github.com/user-attachments/assets/391093f7-a5fa-408e-ae32-34957f4645be)
